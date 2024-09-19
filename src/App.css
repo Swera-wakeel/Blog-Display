@@ -1,38 +1,52 @@
 .App {
   text-align: center;
+  padding: 20px;
+  background-color: #5a4529; /* Light background for the app */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between grid items */
+  max-width: 1200px; /* Adjust width as needed */
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.blog-post {
+  background-color: #ffc98c; /* White background for blog posts */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.blog-post:hover {
+  transform: scale(1.03); /* Slightly zoom in on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  color: #817159;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blog-post .post-header {
+  margin-bottom: 15px;
+}
+
+.blog-post h2 {
+  color: #4d330e;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.blog-post .author-date {
+  color: #534038;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.blog-post p {
+  color: #70452c;
+  line-height: 1.6; /* Improve readability */
 }
